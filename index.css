@@ -3,6 +3,10 @@
     padding: 0%;
     box-sizing: border-box ;
 }
+/* body{
+  background: url('KC-key_leather_small.jpg') no-repeat center center;
+  background-size: cover;
+} */
 nav{
   background-color: #6c2726;
   color: white ;
@@ -48,10 +52,6 @@ li{
 }
 .hamburger-bottom{
   transform: translateY(14px);
-}
-body{
-  background: url('KC-key_leather_small.jpg') no-repeat center center;
-  background-size: cover;
 }
 #box{
   display: flex;
