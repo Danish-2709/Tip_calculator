@@ -148,9 +148,16 @@ button:active{
 }
 @media only screen and (max-width: 300px) {
   nav, h1, #hamburger, #box {font-size: 11px}
-}
+    
 #box::before{
   position: fixed;
   top: 0;
   left: 0;
+}
+nav{
+  position: absolute;
+  top: 0;
+  left: 29px;
+  right: -29px;
+}
 }
