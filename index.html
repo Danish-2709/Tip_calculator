@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <div>
+        <nav>
+            <h1>Brand</h1>
+            <ul>
+                <li>Home </li>
+                <li>Menu</li>
+                <li>Contact</li>
+                <li>FAQ</li>
+            </ul> 
+                <div id="hamburger">
+                    <span class="hamburger-top"></span>
+                    <span class="hamburger-middle"></span>
+                    <span class="hamburger-bottom"></span>
+                </div> 
+        </nav>
+    </div>
+    <div id="box">
+        <h1>Tip Calculator</h1>
+        <div id="calc">
+            <form>
+                <label for="text">How Much Is Your Bill?<br>
+                 ₹ <input type="text" id="bill">
+                </label>
+                <label for="text">How Was Our Services?<br>
+                    <select name="text" id="services">
+                        <option disable selected value="0">---Choose An Option---</option>
+                        <option value="0.2">20%---Outstanding</option>
+                        <option value="0.15">15%---Good</option>
+                        <option value="0.1">10%---It Was okay</option>
+                        <option value="0.05">5%---Bad</option>
+                        <option value="0.03">3%---Terrible</option>
+                    </select>
+                </label>
+                <label for="text">How Many People Are Sharing The Bill?<br>
+                    <input type="text" id="total">  People
+                </label>
+                <!-- <button type="btn" id="calculate">Calculate!</button> -->
+                <button type="button" id="calculate" >Calculate!</button>
+            </form>
+        </div>
+        <div id="tip">
+            <sup> ₹ </sup><span id ="tip-calc">0.00</span>
+            <small id="each">each</small>
+        </div>
+    </div>
+    <script type="text/javascript">
+        // Tip Calculator
+        // Custom Function
+        function calculateTip(){
+
+            // Store the data of inputs
+            var billAmount = document.getElementById("bill").value;
+            var serviceQuality = document.getElementById("services").value;
+            var numPeople = document.getElementById("total").value;
+
+            // Quick Validation
+            if( billAmount === "" || serviceQuality === 0){
+                window.alert("Please Enter The Some Value To Get This Baby Up & Running!");
+                return; //This will prevent the function from continuing
+            }
+
+            //Check to see numPeople input is empty or less than one or equal to one
+            if(numPeople === "" || numPeople <= 1){
+                numPeople = 1;
+
+                document.getElementById("tip").style.display = "none";
+                document.getElementById("each").style.display = "none";
+            }
+            else{
+                document.getElementById("tip").style.display = "block";  
+                document.getElementById("each").style.display = "block";  
+            }
+            // Do Some Calculation
+            var total = (billAmount * serviceQuality) / numPeople;
+            total = Math.round(total * 100) / 100;
+            total  = total.toFixed(2);
+
+             // Display the tip
+            document.getElementById("tip").style.display = "block";
+            document.getElementById("tip-calc").innerHTML = total;
+
+        }
+         
+        // Hide The Tip Amount
+        document.getElementById("tip").style.display = "none";
+        document.getElementById("each").style.display = "none";
+
+        // Click The Button Calls or Custom Function
+        document.getElementById("calculate").onclick = function(){ calculateTip();};
+
+
+
+
+
+
+
+
+
+
+        // var currentDate = new Date();
+        // window.alert(currentDate);
+
+        // var funMessage = "Hello!";
+        // window.alert(funMessage);
+
+        // var age = 17;
+
+        // if( age > 18){
+
+        //     document.getElementById("box").innerHTML = "you're an Adult";
+        //     document.getElementById("box").style.color = "green";
+        
+        // }
+        // else{
+        //     document.getElementById("box").innerHTML = "you're just a Teenager";
+        //     document.getElementById("box").style.color = "red";
+          
+
+        // }
+    </script>
+</body>
+</html>
