@@ -50,7 +50,7 @@ li{
   transform: translateY(14px);
 }
 body{
-  background: url('images/KC-key_leather_small.jpg') no-repeat center center;
+  background: url('KC-key_leather_small.jpg') no-repeat center center;
   background-size: cover;
 }
 #box{
