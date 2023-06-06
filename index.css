@@ -134,11 +134,13 @@ button:active{
   font-size: 14px;
   font-weight: bold;
   display: block;
-}
-@media only screen and (max-width: 400px) {
+}@media only screen and (max-width: 400px) {
   nav, h1, #hamburger, #box {font-size: 11px}
+
 #box{
-  margin: 75px auto 0px;
+  margin: 200px auto 0px;
+  margin-left: 50px;
+  margin-right: auto ;
 }
 #box::before{
   position: fixed;
@@ -150,12 +152,21 @@ nav{
   top: 0;
   left: 29px;
   right: -29px;
+  margin: 0px;
+}
+li{
+  display: none;
+}
+#hamburger{
+  display: block;
 }
 }
 @media only screen and (max-width: 300px) {
   nav, h1, #hamburger, #box {font-size: 11px}
 #box{
-  margin: 75px auto 0px;
+  margin: 200px auto 0px;
+  margin-left: 50px;
+  margin-right: 50px;
 }
 #box::before{
   position: fixed;
@@ -167,5 +178,12 @@ nav{
   top: 0;
   left: 29px;
   right: -29px;
+  margin: 0px;
+}
+li{
+  display: none;
+}
+#hamburger{
+  display: block;
 }
 }
