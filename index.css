@@ -140,7 +140,7 @@ button:active{
 #box{
   margin: 200px auto 0px;
   margin-left: 50px;
-  margin-right: auto ;
+  margin-right: 50px ;
 }
 #box::before{
   position: fixed;
