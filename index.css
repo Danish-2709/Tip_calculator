@@ -139,7 +139,7 @@ button:active{
 
 #box{
   margin: 200px auto 0px;
-  margin-left: 50px;
+  margin-left: 25px;
   margin-right: 50px ;
 }
 #box::before{
@@ -150,8 +150,8 @@ button:active{
 nav{
   position: absolute;
   top: 0;
-  left: 29px;
-  right: -29px;
+  left: 19px;
+  right: -19px;
   margin: 0px;
 }
 li{
@@ -165,7 +165,7 @@ li{
   nav, h1, #hamburger, #box {font-size: 11px}
 #box{
   margin: 200px auto 0px;
-  margin-left: 50px;
+  margin-left: 25px;
   margin-right: 50px;
 }
 #box::before{
@@ -176,8 +176,8 @@ li{
 nav{
   position: absolute;
   top: 0;
-  left: 29px;
-  right: -29px;
+  left: 19px;
+  right: -19px;
   margin: 0px;
 }
 li{
